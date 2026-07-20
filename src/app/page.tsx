@@ -1,65 +1,136 @@
-import Image from "next/image";
+"use client";
+
+import React from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/sections/Hero";
+import About from "@/sections/About";
+import Vision from "@/sections/Vision";
+import CEO from "@/sections/CEO";
+import Products from "@/sections/Products";
+import WhyDiSEC from "@/sections/WhyDiSEC";
+import Industries from "@/sections/Industries";
+import TechStack from "@/sections/TechStack";
+import Research from "@/sections/Research";
+import Stats from "@/sections/Stats";
+import Investors from "@/sections/Investors";
+import Testimonials from "@/sections/Testimonials";
+import Blog from "@/sections/Blog";
+import Contact from "@/sections/Contact";
+import Footer from "@/sections/Footer";
 
 export default function Home() {
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "DiSEC Enterprise AI Stack",
+    "description": "Proprietary Artificial Intelligence products, enterprise software, and intelligent infrastructure.",
+    "brand": {
+      "@type": "Brand",
+      "name": "DiSEC Solutions"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "USD",
+      "price": "0.00",
+      "priceModel": "Enterprise Contact sales for licensing pricing.",
+      "availability": "https://schema.org/InStock"
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does DiSEC Solutions offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DiSEC Solutions develops proprietary Artificial Intelligence products, enterprise software, and intelligent infrastructure for enterprises, startups, and governments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is the founder of DiSEC Solutions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DiSEC Solutions was founded by Gautham Krishna, who serves as the Founder & CEO."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I partner with DiSEC Solutions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can contact our partnerships team through the contact section on our landing page, choosing the 'Become Partner' pipeline."
+        }
+      }
+    ]
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="relative min-h-screen bg-[#050816] text-white flex flex-col justify-between overflow-x-hidden">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      </head>
+      {/* Sticky Navigation Header */}
+      <Navbar />
+
+      {/* Landing Page Content Sections */}
+      <main className="flex-1 flex flex-col">
+        {/* Hero Section & Core Metrics */}
+        <Hero />
+
+        {/* Corporate Overview */}
+        <About />
+
+        {/* Values, Vision & Mission Pillars */}
+        <Vision />
+
+        {/* Leadership Spotlight */}
+        <CEO />
+
+        {/* Interconnected Products Ecosystem */}
+        <Products />
+
+        {/* Corporate Performance Metrics */}
+        <Stats />
+
+        {/* Why Choose DiSEC Stack */}
+        <WhyDiSEC />
+
+        {/* Industry Verticals */}
+        <Industries />
+
+        {/* Technology Ecosystem Stack */}
+        <TechStack />
+
+        {/* Model Lifecycle Research Timeline */}
+        <Research />
+
+        {/* Institutional Investors Portal */}
+        <Investors />
+
+        {/* Customer Validation Masonry */}
+        <Testimonials />
+
+
+        {/* R&D Publications */}
+        <Blog />
+
+        {/* Dynamic Enterprise Contact Intake */}
+        <Contact />
       </main>
+
+      {/* Corporate Sitemap Footer */}
+      <Footer />
     </div>
   );
 }

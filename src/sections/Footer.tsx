@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
                             width={160}
                             height={45}
                             priority
-                            className={"w-auto object-contain group-hover:scale-105 transition-all duration-300"}
+                            className="h-10 w-auto object-contain group-hover:scale-105 transition-all duration-300"
                           />
                         </a>
               </div>

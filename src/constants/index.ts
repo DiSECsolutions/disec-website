@@ -5,6 +5,7 @@ export const SITE_CONFIG = {
   // A configurable URL constant for the founder's personal portfolio/website
   founderPortfolioUrl: "https://gautham.disecsolution.com", 
   founderLinkedInUrl: "https://www.linkedin.com/in/gauthamkrishna1312",
+  founderYoutubeUrl: "https://www.youtube.com/@ctechguy997",
   githubUrl: "https://github.com/gauthamkrishna1312",
   linkedinUrl: "https://linkedin.com/company/disec-solutions",
   instagramUrl: "https://instagram.com/disec_solutions",

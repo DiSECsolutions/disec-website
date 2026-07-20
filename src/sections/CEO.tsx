@@ -18,6 +18,13 @@ const Linkedin = ({ size = 16, ...props }: CustomIconProps) => (
   </svg>
 );
 
+const Youtube = ({ size = 16, ...props }: CustomIconProps) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+  </svg>
+);
+
 export const CEO: React.FC = () => {
   const badges = [
     "Founder",
@@ -78,7 +85,7 @@ export const CEO: React.FC = () => {
             >
               <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <Image
-                  src="/ceo_portrait.png"
+                  src="/ceo_photo.jpg"
                   alt="Gautham Krishna P - Founder & CEO of DiSEC Solutions"
                   fill
                   sizes="(max-w-768px) 100vw, 400px"
@@ -183,6 +190,15 @@ export const CEO: React.FC = () => {
               >
                 <Linkedin size={14} className="text-[#3B82F6]" />
                 LinkedIn
+              </a>
+              <a
+                href={SITE_CONFIG.founderYoutubeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass border-white/[0.08] text-white hover:bg-white/5 font-semibold text-sm transition-all duration-200"
+              >
+                <Youtube size={14} className="text-[#FF0000]" />
+                YouTube Channel
               </a>
             </motion.div>
           </div>

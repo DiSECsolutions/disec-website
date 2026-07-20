@@ -41,7 +41,7 @@ export const Navbar: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
           {/* Logo */}
-          <div className={`bg-white rounded-lg shadow-md transition-all duration-300 ${isScrolled ? "p-1" : "p-1.5"}`}>
+          {/* <div className={`bg-white rounded-lg shadow-md transition-all duration-300 ${isScrolled ? "p-1" : "p-1.5"}`}>
             <a href="#home" className="flex items-center gap-2 group focus:outline-none">
               <Image
                 src="/logo.jpeg"
@@ -54,7 +54,7 @@ export const Navbar: React.FC = () => {
                 }`}
               />
             </a>
-          </div>
+          </div> */}
 
           {/* Desktop Nav Links */}
           <div className="hidden lg:flex items-center gap-8">

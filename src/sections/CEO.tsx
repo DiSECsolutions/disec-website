@@ -36,7 +36,7 @@ export const CEO: React.FC = () => {
   return (
     <section 
       id="ceo" 
-      className="relative py-24 md:py-32 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 md:py-32 bg-[#050816] overflow-hidden"
     >
       {/* CEO Background Animated Gradients / Glows */}
       <div 

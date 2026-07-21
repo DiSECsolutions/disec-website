@@ -15,7 +15,7 @@ export const Industries: React.FC = () => {
   return (
     <section 
       id="industries" 
-      className="relative py-24 md:py-32 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 md:py-32 bg-[#050816] overflow-hidden"
     >
       {/* Background low-opacity typography */}
       <div 
@@ -41,7 +41,7 @@ export const Industries: React.FC = () => {
         </div>
 
         {/* Interactive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           {INDUSTRIES.map((industry) => {
             const IconComponent = IconMap[industry.iconName] || ShieldAlert;
             const isHovered = hoveredId === industry.id;
@@ -51,7 +51,7 @@ export const Industries: React.FC = () => {
                 key={industry.id}
                 onMouseEnter={() => setHoveredId(industry.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className="relative h-72 rounded-2xl overflow-hidden glass border-white/[0.05] p-6 flex flex-col justify-between cursor-pointer group transition-all duration-300"
+                className="relative min-h-[18rem] h-full rounded-2xl overflow-hidden glass border-white/[0.05] p-6 flex flex-col justify-between cursor-pointer group transition-all duration-300"
               >
                 {/* Underlay gradient that transitions in on hover */}
                 <div 

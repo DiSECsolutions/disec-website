@@ -23,7 +23,7 @@ export const Blog: React.FC = () => {
   return (
     <section 
       id="blog" 
-      className="relative py-24 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 bg-[#050816] overflow-hidden"
     >
       {/* Decorative center glow */}
       <div 

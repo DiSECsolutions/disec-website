@@ -75,6 +75,188 @@ body {
   overflow-x: hidden;
 }
 
+section[id] {
+  --section-line: rgba(255, 255, 255, 0.07);
+  isolation: isolate;
+}
+
+.section-frame {
+  position: relative;
+}
+
+.section-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.45;
+  background-image: linear-gradient(90deg, transparent 0, transparent calc(50% - 0.5px), rgba(255, 255, 255, 0.018) 50%, transparent calc(50% + 0.5px)), radial-gradient(rgba(255, 255, 255, 0.12) 0.5px, transparent 0.5px);
+  background-size: 100% 100%, 18px 18px;
+  mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+.section-frame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: max(1.5rem, calc((100vw - 80rem) / 2));
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--section-line) 18%, var(--section-line) 82%, transparent);
+  pointer-events: none;
+}
+
+.section-frame > .relative.z-10 {
+  position: relative;
+}
+
+section[id] .glass,
+section[id] .glass-card {
+  border-radius: 1.15rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+#about .max-w-7xl > .grid,
+#vision .max-w-7xl > .grid,
+#ceo .max-w-7xl > .grid,
+#contact .max-w-7xl > .grid {
+  position: relative;
+}
+
+#about .max-w-7xl > .grid::before,
+#ceo .max-w-7xl > .grid::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 212, 255, 0.25), transparent);
+  pointer-events: none;
+}
+
+#about .glass.p-2 {
+  transform: rotate(-1.5deg);
+  transition: transform 500ms ease, border-color 300ms ease;
+}
+
+#about .glass.p-2:hover {
+  transform: rotate(0deg) translateY(-6px);
+}
+
+#about .grid.grid-cols-1.sm\:grid-cols-2 > div:nth-child(odd) {
+  transform: translateY(0.75rem);
+}
+
+#vision .lg\:col-span-5 > div {
+  border-top: 2px solid #00D4FF;
+}
+
+#vision .grid.grid-cols-1.sm\:grid-cols-2 > div:nth-child(2) {
+  transform: translateY(1rem);
+}
+
+#products .lg\:col-span-7,
+#investors .glass {
+  border-radius: 1.5rem;
+}
+
+#products .lg\:col-span-7 {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+#stats .grid > div {
+  position: relative;
+}
+
+#stats .grid > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -1.5rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+#industries .grid > div:hover {
+  transform: translateY(-0.25rem) rotate(-1deg);
+}
+
+#tech-stack .grid > div:nth-child(3n) {
+  border-top-color: rgba(139, 92, 246, 0.4);
+}
+
+#research .max-w-4xl {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#research .max-w-md {
+  border-left: 2px solid rgba(0, 212, 255, 0.35);
+}
+
+#testimonials .grid > div:nth-child(2) {
+  transform: translateY(1.5rem);
+}
+
+#testimonials .grid > div:hover,
+#testimonials .grid > div:nth-child(2):hover {
+  transform: translateY(-0.25rem);
+}
+
+#blog article:first-child {
+  grid-column: span 2;
+  min-height: 18rem;
+  border-top: 2px solid #00D4FF;
+}
+
+#blog article:last-child {
+  grid-column: span 2;
+  min-height: 18rem;
+  border-top: 2px solid #00D4FF;
+}
+
+#contact .glass-card {
+  border-top: 2px solid #00D4FF;
+  border-radius: 1.5rem;
+}
+
+#contact input,
+#contact textarea {
+  border-radius: 0.65rem;
+}
+
+@media (max-width: 1023px) {
+  .section-frame::after,
+  #about .max-w-7xl > .grid::before,
+  #ceo .max-w-7xl > .grid::before {
+    display: none;
+  }
+
+  #stats .grid > div:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  #about .grid.grid-cols-1.sm\:grid-cols-2 > div:nth-child(odd),
+  #vision .grid.grid-cols-1.sm\:grid-cols-2 > div:nth-child(2),
+  #testimonials .grid > div:nth-child(2) {
+    transform: none;
+  }
+
+  #blog article:first-child {
+    grid-column: auto;
+  }
+
+  #blog article:last-child {
+    grid-column: auto;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -92,4 +274,3 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-

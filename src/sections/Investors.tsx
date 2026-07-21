@@ -17,7 +17,7 @@ export const Investors: React.FC = () => {
   return (
     <section 
       id="investors" 
-      className="relative py-24 md:py-32 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 md:py-32 bg-[#050816] overflow-hidden"
     >
       {/* Premium animated gradient background circle */}
       <motion.div

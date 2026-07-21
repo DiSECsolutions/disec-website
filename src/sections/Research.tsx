@@ -8,7 +8,7 @@ export const Research: React.FC = () => {
   return (
     <section 
       id="research" 
-      className="relative py-24 md:py-32 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 md:py-32 bg-[#050816] overflow-hidden"
     >
       {/* Decorative radial glows */}
       <div 
@@ -48,7 +48,7 @@ export const Research: React.FC = () => {
               initial={{ height: 0 }}
               whileInView={{ height: "100%" }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
+              transition={{ duration: 4, ease: "easeInOut" }}
               className="w-full bg-gradient-to-b from-[#00D4FF] via-[#3B82F6] to-[#8B5CF6]"
             />
           </div>

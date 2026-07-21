@@ -64,7 +64,7 @@ export const Stats: React.FC = () => {
   return (
     <section 
       id="stats" 
-      className="relative py-24 bg-[#0F172A]/40 border-y border-white/[0.05] overflow-hidden"
+      className="section-frame relative py-24 bg-[#0F172A]/40 border-y border-white/[0.05] overflow-hidden"
     >
       {/* Decorative center glow */}
       <div 

@@ -23,7 +23,7 @@ export const TechStack: React.FC = () => {
   return (
     <section 
       id="tech-stack" 
-      className="relative py-24 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 bg-[#050816] overflow-hidden"
     >
       {/* Decorative glows */}
       <div 
@@ -63,15 +63,17 @@ export const TechStack: React.FC = () => {
                 
                 <div>
                   {/* Card Top Category & Icon */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-manrope font-bold tracking-wider text-[#94A3B8]/60 uppercase">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-white/[0.06] to-white/[0.01] border border-white/[0.1] flex items-center justify-center group-hover:border-[#00D4FF]/40 group-hover:bg-[#00D4FF]/10 transition-all duration-300">
+                      {React.cloneElement(getCategoryIcon(tech.category), { size: 20 })}
+                    </div>
+                    <span className="pt-1 text-right text-[10px] font-manrope font-bold tracking-wider text-[#94A3B8]/60 uppercase">
                       {tech.category}
                     </span>
-                    {getCategoryIcon(tech.category)}
                   </div>
 
                   {/* Technology Name */}
-                  <h3 className="mt-4 text-xl font-bold font-space text-white group-hover:text-gradient-neon transition-all duration-300">
+                  <h3 className="mt-5 text-xl font-bold font-space text-white group-hover:text-gradient-neon transition-all duration-300">
                     {tech.name}
                   </h3>
                 </div>

@@ -30,7 +30,7 @@ export const Contact: React.FC = () => {
         ...formData,
       });
 
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: payload.toString(),
@@ -149,7 +149,7 @@ export const Contact: React.FC = () => {
                     onSubmit={handleSubmit}
                     name="disec-contact"
                     method="POST"
-                    action="/?success=true"
+                    action="/__forms.html?success=true"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                     className="space-y-6 text-left"

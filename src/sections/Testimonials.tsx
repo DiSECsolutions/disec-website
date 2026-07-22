@@ -18,7 +18,7 @@ export const Testimonials: React.FC = () => {
   return (
     <section 
       id="testimonials" 
-      className="relative py-24 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 bg-[#050816] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         

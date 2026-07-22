@@ -16,16 +16,37 @@ export const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate submission delay
-    setTimeout(() => {
+    setSubmitError(false);
+
+    try {
+      const payload = new URLSearchParams({
+        "form-name": "disec-contact",
+        inquiryType: formType,
+        ...formData,
+      });
+
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: payload.toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Netlify form submission failed");
+      }
+
       setIsSubmitting(false);
       setSubmitted(true);
       setFormData({ name: "", company: "", email: "", phone: "", message: "" });
-    }, 1500);
+    } catch {
+      setIsSubmitting(false);
+      setSubmitError(true);
+    }
   };
 
   const handleReset = () => {
@@ -35,7 +56,7 @@ export const Contact: React.FC = () => {
   return (
     <section 
       id="contact" 
-      className="relative py-24 md:py-32 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 md:py-32 bg-[#050816] overflow-hidden"
     >
       {/* Decorative glows */}
       <div 
@@ -126,8 +147,20 @@ export const Contact: React.FC = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     onSubmit={handleSubmit}
+                    name="disec-contact"
+                    method="POST"
+                    action="/__forms.html?success=true"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
                     className="space-y-6 text-left"
                   >
+                    <input type="hidden" name="form-name" value="disec-contact" />
+                    <input type="hidden" name="inquiryType" value={formType} />
+                    <div className="hidden" aria-hidden="true">
+                      <label htmlFor="bot-field">Don&apos;t fill this out if you&apos;re human</label>
+                      <input id="bot-field" name="bot-field" tabIndex={-1} autoComplete="off" />
+                    </div>
+
                     {/* Two column Name & Company */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="flex flex-col">
@@ -135,6 +168,7 @@ export const Contact: React.FC = () => {
                         <input
                           type="text"
                           id="name"
+                          name="name"
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -147,6 +181,7 @@ export const Contact: React.FC = () => {
                         <input
                           type="text"
                           id="company"
+                          name="company"
                           required
                           value={formData.company}
                           onChange={(e) => setFormData({ ...formData, company: e.target.value })}
@@ -163,6 +198,7 @@ export const Contact: React.FC = () => {
                         <input
                           type="email"
                           id="email"
+                          name="email"
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -175,6 +211,7 @@ export const Contact: React.FC = () => {
                         <input
                           type="tel"
                           id="phone"
+                          name="phone"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+1 (555) 000-0000"
@@ -188,6 +225,7 @@ export const Contact: React.FC = () => {
                       <label htmlFor="message" className="text-xs font-manrope font-semibold text-[#94A3B8] mb-2">Message *</label>
                       <textarea
                         id="message"
+                        name="message"
                         required
                         rows={4}
                         value={formData.message}
@@ -215,6 +253,11 @@ export const Contact: React.FC = () => {
                         </>
                       )}
                     </button>
+                    {submitError && (
+                      <p className="text-center text-xs text-[#FF8A8A]" role="alert">
+                        We couldn&apos;t send your request. Please try again.
+                      </p>
+                    )}
                   </motion.form>
                 ) : (
                   <motion.div

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 
@@ -39,30 +38,14 @@ export const Navbar: React.FC = () => {
             : "h-20 bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
-          {/* Logo */}
-          {/* <div className={`bg-white rounded-lg shadow-md transition-all duration-300 ${isScrolled ? "p-1" : "p-1.5"}`}>
-            <a href="#home" className="flex items-center gap-2 group focus:outline-none">
-              <Image
-                src="/logo.jpeg"
-                alt="DiSEC Solutions Logo"
-                width={160}
-                height={45}
-                priority
-                className={`w-auto object-contain group-hover:scale-105 transition-all duration-300 ${
-                  isScrolled ? "h-9" : "h-14"
-                }`}
-              />
-            </a>
-          </div> */}
-
+        <div className="max-w-7xl mx-auto h-full px-6 flex items-center justify-between gap-8">
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-manrope font-medium text-[#94A3B8] hover:text-white transition-colors duration-200 relative py-2 focus:outline-none focus:text-white"
+                className="text-xs font-manrope font-semibold text-[#94A3B8] hover:text-white transition-colors duration-200 relative py-2 focus:outline-none focus:text-white uppercase tracking-wider"
               >
                 {link.label}
               </a>
@@ -73,7 +56,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#00D4FF] via-[#3B82F6] to-[#8B5CF6] text-black font-bold text-sm hover:opacity-90 transition-all duration-300 shadow-lg shadow-[#00D4FF]/20 hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#00D4FF] via-[#3B82F6] to-[#8B5CF6] text-black font-bold text-sm hover:opacity-90 transition-all duration-300 shadow-lg shadow-[#00D4FF]/20 hover:-translate-y-0.5"
             >
               Partner With Us
               <ArrowRight size={16} />

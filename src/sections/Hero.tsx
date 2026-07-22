@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Brain, Cpu } from "lucide-react";
+import { ArrowDownRight, ArrowRight, Sparkles } from "lucide-react";
 import NeuralBackground from "@/components/NeuralBackground";
 import GridBackground from "@/components/GridBackground";
 
@@ -17,7 +17,7 @@ export const Hero: React.FC = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-[#050816] pt-32 pb-16 z-10"
+      className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-[#050816] pt-28 pb-10 md:pt-32 md:pb-16 z-10"
     >
       {/* Background components */}
       <GridBackground />
@@ -29,97 +29,79 @@ export const Hero: React.FC = () => {
         aria-hidden="true" 
       />
 
-      {/* Floating AI Chips / Circuits decoration */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
-        {/* Floating Chip 1 */}
-        <motion.div
-          animate={{
-            y: [0, -15, 0],
-            rotate: [0, 5, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-1/4 left-[8%] hidden xl:flex items-center gap-3 p-4 rounded-2xl glass glow-primary border-white/[0.05]"
-        >
-          <Cpu className="text-[#00D4FF]" size={24} />
-          <div className="text-left">
-            <p className="text-[10px] text-[#94A3B8] font-manrope font-semibold tracking-widest uppercase">Process Engine</p>
-            <p className="text-xs font-bold font-space text-white">TPU Cluster Node</p>
-          </div>
-        </motion.div>
-
-        {/* Floating Chip 2 */}
-        <motion.div
-          animate={{
-            y: [0, 15, 0],
-            rotate: [0, -5, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-          className="absolute bottom-1/3 right-[8%] hidden xl:flex items-center gap-3 p-4 rounded-2xl glass glow-highlight border-white/[0.05]"
-        >
-          <Brain className="text-[#8B5CF6]" size={24} />
-          <div className="text-left">
-            <p className="text-[10px] text-[#94A3B8] font-manrope font-semibold tracking-widest uppercase">Neural Grid</p>
-            <p className="text-xs font-bold font-space text-white">Autonomous Agent</p>
-          </div>
-        </motion.div>
-      </div>
-
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto w-full px-6 flex-1 flex flex-col justify-center text-center relative z-20">
+      <div className="max-w-7xl mx-auto w-full px-6 flex-1 flex flex-col justify-center relative z-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col items-center"
+          className="grid lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-20 items-center"
         >
-          {/* Tag */}
-          <div className="mb-6 inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#00D4FF]/30 bg-[#00D4FF]/5 text-xs text-[#00D4FF] font-manrope font-semibold tracking-wide uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00D4FF] animate-ping" />
-            Next-Generation AI Stack
-          </div>
+          <div className="text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem] font-bold font-space tracking-tight leading-[1.02] max-w-3xl text-gradient-primary">
+              Building AI That <br />
+              <span className="text-gradient-neon">Solves Real Problems.</span>
+            </h1>
 
-          {/* Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-space tracking-tight leading-tight max-w-4xl text-gradient-primary">
-            Building AI That <br />
-            <span className="text-gradient-neon">Solves Real Problems.</span>
-          </h1>
+            <p className="mt-8 text-lg md:text-xl text-[#94A3B8] max-w-xl font-sans leading-relaxed">
+              DiSEC Solutions develops proprietary Artificial Intelligence products, enterprise software, and intelligent infrastructure for enterprises, startups, and governments.
+            </p>
 
-          {/* Subheading */}
-          <p className="mt-8 text-lg md:text-xl text-[#94A3B8] max-w-2xl font-sans leading-relaxed">
-            DiSEC Solutions develops proprietary Artificial Intelligence products, enterprise software, and intelligent infrastructure for enterprises, startups, and governments.
-          </p>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+              <a
+                href="#products"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-[#00D4FF] to-[#3B82F6] text-black font-bold hover:opacity-95 transition-all duration-300 shadow-lg shadow-[#00D4FF]/20 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#00D4FF] focus:ring-offset-2 focus:ring-offset-[#050816]"
+              >
+                Explore Products
+                <ArrowRight size={18} />
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl glass border-white/[0.08] text-white font-semibold hover:bg-white/5 transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#00D4FF]"
+              >
+                Partner With Us
+              </a>
+            </div>
 
-          {/* Buttons */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-            <a
-              href="#products"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#00D4FF] to-[#3B82F6] text-black font-bold hover:opacity-95 transition-all duration-300 shadow-lg shadow-[#00D4FF]/20 hover:scale-[1.03]"
-            >
-              Explore Products
-              <ArrowRight size={18} />
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl glass border-white/[0.08] text-white font-semibold hover:bg-white/5 transition-all duration-300 hover:scale-[1.03]"
-            >
-              Partner With Us
-            </a>
-            <a
-              href="#investors"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-dashed border-white/20 text-[#94A3B8] hover:text-white transition-all duration-300 hover:scale-[1.03]"
-            >
+            <a href="#investors" className="mt-6 inline-flex items-center gap-2 text-sm text-[#94A3B8] hover:text-white transition-colors duration-200 group">
               Investor Relations
+              <ArrowDownRight size={15} className="text-[#8B5CF6] group-hover:translate-x-1 group-hover:translate-y-1 transition-transform" />
             </a>
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, rotate: 2 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+            className="relative w-full max-w-[520px] lg:justify-self-end"
+          >
+            <div className="absolute -inset-6 bg-gradient-to-tr from-[#00D4FF]/10 via-[#3B82F6]/5 to-[#8B5CF6]/10 blur-3xl" />
+            <div className="relative rounded-[2rem] border border-white/[0.1] bg-[#0F172A]/75 backdrop-blur-xl p-5 md:p-7 shadow-2xl shadow-black/30">
+              <div className="flex items-center justify-between pb-5 border-b border-white/[0.08]">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00D4FF]/20 to-[#3B82F6]/20 border border-[#00D4FF]/30 flex items-center justify-center">
+                    <Sparkles size={19} className="text-[#00D4FF]" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-[#94A3B8] font-manrope uppercase tracking-widest">DiSEC Core</p>
+                    <p className="mt-1 text-sm font-semibold text-white">Intelligence in motion</p>
+                  </div>
+                </div>
+                <span className="flex items-center gap-1.5 text-[10px] text-[#00D4FF] font-manrope uppercase tracking-widest"><span className="w-1.5 h-1.5 rounded-full bg-[#00D4FF]" /> Live</span>
+              </div>
+
+              <div className="py-6 grid grid-cols-2 gap-3">
+                {metrics.map((metric, index) => (
+                  <div key={metric.label} className="rounded-2xl bg-white/[0.03] border border-white/[0.06] p-4 hover:border-[#00D4FF]/30 transition-colors">
+                    <p className="text-2xl md:text-3xl font-bold font-space text-white">{metric.value}</p>
+                    <p className="mt-1 text-[10px] text-[#94A3B8] font-manrope tracking-widest uppercase">{metric.label}</p>
+                    <div className="mt-4 h-1 rounded-full bg-white/[0.06] overflow-hidden"><div className={`h-full rounded-full bg-gradient-to-r from-[#00D4FF] to-[#8B5CF6] ${index === 0 ? "w-[86%]" : index === 1 ? "w-[68%]" : index === 2 ? "w-[74%]" : "w-[94%]"}`} /></div>
+                  </div>
+                ))}
+              </div>
+
+            </div>
+          </motion.div>
         </motion.div>
       </div>
 

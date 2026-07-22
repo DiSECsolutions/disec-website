@@ -11,7 +11,7 @@ export const Vision: React.FC = () => {
   return (
     <section 
       id="vision" 
-      className="relative py-24 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 bg-[#050816] overflow-hidden"
     >
       {/* Decorative gradient glow */}
       <div 

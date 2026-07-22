@@ -14,7 +14,7 @@ export const About: React.FC = () => {
   return (
     <section 
       id="about" 
-      className="relative py-24 md:py-32 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 md:py-32 bg-[#050816] overflow-hidden"
     >
       {/* Decorative background glow */}
       <div 

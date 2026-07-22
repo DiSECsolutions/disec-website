@@ -99,7 +99,7 @@ export const Products: React.FC = () => {
   return (
     <section 
       id="products" 
-      className="relative py-24 md:py-32 bg-[#050816] overflow-hidden"
+      className="section-frame relative py-24 md:py-32 bg-[#050816] overflow-hidden"
     >
       {/* Decorative center glow */}
       <div 
@@ -123,16 +123,16 @@ export const Products: React.FC = () => {
         </div>
 
         {/* Dashboard grid layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           
           {/* LEFT: Dashboard Control Panel (5 columns) */}
-          <div className="lg:col-span-5 flex flex-col justify-between p-8 rounded-3xl glass border-white/[0.08] bg-slate-950/40 backdrop-blur-xl relative overflow-hidden text-left shadow-2xl shadow-black/50">
+          <div className="lg:col-span-5 flex flex-col justify-between p-6 md:p-8 rounded-3xl glass border-white/[0.08] bg-slate-950/40 backdrop-blur-xl relative overflow-hidden text-left shadow-2xl shadow-black/50">
             {/* Top diagnostic panel headers */}
             <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#00D4FF]/40 to-transparent" />
             <div className="flex items-center justify-between border-b border-white/[0.05] pb-4 mb-6">
               <span className="text-[10px] font-manrope font-bold tracking-widest text-[#00D4FF] uppercase flex items-center gap-1.5">
                 <Activity size={12} className="animate-pulse" />
-                SYSTEM DIAGNOSTIC // ACTIVE
+                SELECTED MODULE
               </span>
               <span className="text-[10px] font-manrope text-[#94A3B8]/60 uppercase">
                 ID: {activeNode.id.toUpperCase()}
@@ -226,7 +226,11 @@ export const Products: React.FC = () => {
           </div>
 
           {/* RIGHT: Orbit Visual Interactive Canvas (7 columns) */}
-          <div className="lg:col-span-7 relative h-[650px] rounded-3xl glass border-white/[0.08] bg-[#070b19]/30 overflow-hidden shadow-2xl">
+          <div className="lg:col-span-7 relative h-[520px] md:h-[580px] rounded-3xl glass border-white/[0.08] bg-[#070b19]/30 overflow-hidden shadow-2xl">
+            <div className="absolute top-5 left-6 right-6 z-20 flex items-center justify-between pointer-events-none">
+              <span className="text-[10px] font-manrope font-bold tracking-widest uppercase text-white/60">Product map</span>
+              <span className="text-[10px] font-manrope tracking-widest uppercase text-[#94A3B8]/50">01 — 06</span>
+            </div>
             
             {/* SVG Connecting Lines Canvas */}
             <svg 
@@ -375,7 +379,7 @@ export const Products: React.FC = () => {
             })}
 
             {/* Instruction Banner overlay */}
-            <div className="absolute bottom-6 right-6 flex items-center gap-2 text-[10px] font-manrope text-[#94A3B8]/60 bg-black/30 px-3 py-1.5 rounded-full border border-white/[0.03]">
+            <div className="absolute bottom-5 left-6 flex items-center gap-2 text-[10px] font-manrope text-[#94A3B8]/60 bg-black/30 px-3 py-1.5 rounded-full border border-white/[0.03]">
               <Network size={12} className="text-[#00D4FF] animate-pulse" />
               <span>Hover nodes to route analytics data</span>
             </div>

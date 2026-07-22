@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#050816] border-t border-white/[0.05] pt-20 pb-12 overflow-hidden">
+    <footer className="section-frame relative bg-[#050816] border-t border-white/[0.05] pt-20 pb-12 overflow-hidden">
       
       {/* Decorative glows */}
       <div 

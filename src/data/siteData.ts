@@ -387,4 +387,12 @@ export const BLOG_POSTS: BlogPost[] = [
     snippet: "We are proud to release DiSEC Enterprise Platform v2.0. This release features native Kubernetes scaling and built-in vector memory clusters.",
     author: "Product Team"
   },
+  {
+    title: "Designing Reliable AI Workflows for High-Stakes Operations",
+    category: "Research",
+    date: "April 22, 2026",
+    readTime: "7 min read",
+    snippet: "A practical look at the evaluation loops, observability patterns, and human checkpoints that make autonomous enterprise workflows dependable.",
+    author: "DiSEC Research Team"
+  },
 ];

@@ -763,17 +763,23 @@
               </p>
             </div>
 
-            <form id="contact-form" novalidate>
+            <form id="contact-form" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+              <!-- Netlify hidden inputs -->
+              <input type="hidden" name="form-name" value="contact" />
+              <p style="display:none;">
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
+
               <!-- Row 1 -->
               <div class="form-row">
                 <div class="form-group">
                   <label for="f-name">Full Name *</label>
-                  <input type="text" id="f-name" placeholder="Your full name" autocomplete="name" />
+                  <input type="text" id="f-name" name="name" placeholder="Your full name" autocomplete="name" />
                   <span class="form-error" id="err-name">Please enter your name.</span>
                 </div>
                 <div class="form-group">
                   <label for="f-email">Email Address *</label>
-                  <input type="email" id="f-email" placeholder="you@example.com" autocomplete="email" />
+                  <input type="email" id="f-email" name="email" placeholder="you@example.com" autocomplete="email" />
                   <span class="form-error" id="err-email">Please enter a valid email address.</span>
                 </div>
               </div>
@@ -782,12 +788,12 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="f-company">Company / College</label>
-                  <input type="text" id="f-company" placeholder="Where you work or study" />
+                  <input type="text" id="f-company" name="company" placeholder="Where you work or study" />
                   <span class="form-error" id="err-company">Please enter your company or college.</span>
                 </div>
                 <div class="form-group">
                   <label for="f-role">Area of Interest *</label>
-                  <select id="f-role">
+                  <select id="f-role" name="role">
                     <option value="">Select a domain…</option>
                     <option value="tech">Technology — Engineering / AI / Hardware / IoT</option>
                     <option value="design">Design — Product / UX / Motion</option>
@@ -802,7 +808,7 @@
               <!-- Message -->
               <div class="form-group">
                 <label for="f-msg">Your Message</label>
-                <textarea id="f-msg"
+                <textarea id="f-msg" name="message"
                   placeholder="Tell Gautham a bit about yourself, what you're working on, and why DiSEC interests you…"></textarea>
               </div>
 

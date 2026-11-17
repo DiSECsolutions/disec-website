@@ -51,18 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 4. ROLE-CARD SELECTOR ────────────────────────────── */
   const roleCards  = document.querySelectorAll('.role-card');
-  const roleSelect = document.getElementById('role-select');
+  const roleSelect = document.getElementById('role-select') || document.getElementById('f-role');
 
   roleCards.forEach(card => {
     card.addEventListener('click', () => {
       roleCards.forEach(c => c.classList.remove('selected'));
       card.classList.add('selected');
-      // Sync with the hidden select inside the form
+      // Sync with the select inside the form
       if (roleSelect) roleSelect.value = card.dataset.role;
     });
   });
 
-  /* ── 5. CONTACT FORM VALIDATION ──────────────────────── */
+  /* ── 5. CONTACT FORM VALIDATION & NETLIFY SUBMISSION ──── */
   const form        = document.getElementById('contact-form');
   const formInner   = document.getElementById('form-inner');
   const formSuccess = document.getElementById('form-success');
@@ -90,8 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!valid) return;
 
-      // Simulate secure submission
       const submitBtn = document.getElementById('submit-btn');
+      const originalBtnHTML = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = `
         <svg class="spin-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -100,10 +100,29 @@ document.addEventListener('DOMContentLoaded', () => {
         Sending…
       `;
 
-      setTimeout(() => {
-        formInner.style.display   = 'none';
-        formSuccess.classList.add('show');
-      }, 950);
+      const formData = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(response => {
+        if (response.ok) {
+          formInner.style.display = 'none';
+          formSuccess.classList.add('show');
+        } else {
+          throw new Error('Form submission failed: ' + response.status);
+        }
+      })
+      .catch(err => {
+        console.error('Submission error:', err);
+        // Fallback for local testing or network error: still show success or alert
+        // If testing locally (not on Netlify), fetch to / will return 404 or 405.
+        // Let user know or fallback gracefully:
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+        alert('There was a problem submitting your form. Please ensure this is deployed on Netlify or email directly at gauthamceo@disecsolution.com.');
+      });
     });
 
     // Clear error on input change

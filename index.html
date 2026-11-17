@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DiSEC — Cloud POS & ERP for Restaurants & Cafés</title>
+  <meta name="description"
+    content="DiSEC builds the cloud POS + ERP platform that powers modern restaurants and cafes — built on AI, IoT, and hardware by the same team researching next-generation silicon intelligence." />
+  <meta name="keywords"
+    content="POS software, restaurant ERP, cafe billing, cloud POS, restaurant management system, DiSEC, AI restaurant technology" />
+  <meta name="author" content="Gautham Krishna P — DiSEC Technologies" />
+  <!-- OG -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://disecsolution.com/" />
+  <meta property="og:title" content="DiSEC — Cloud POS & ERP for Restaurants & Cafés" />
+  <meta property="og:description"
+    content="One unified platform: orders, billing, inventory, analytics and AI — purpose-built for F&B operators." />
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230B1F3A'/><rect x='8' y='8' width='16' height='16' rx='3' stroke='%2300A3C4' stroke-width='1.8' fill='none'/><rect x='12' y='12' width='8' height='8' rx='1.5' fill='%2300A3C4'/></svg>" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+     NAVBAR
+============================================================ -->
+  <header id="navbar" role="banner">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="#hero" class="nav-logo" aria-label="DiSEC Home">
+        <div class="nav-logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="4" />
+            <rect x="8" y="8" width="8" height="8" rx="1.5" />
+            <path d="M8 2v3M16 2v3M8 19v3M16 19v3M2 8h3M2 16h3M19 8h3M19 16h3" />
+          </svg>
+        </div>
+        <span class="nav-logo-text">Di<span>SEC</span></span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#product">Product</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#ceo">About</a></li>
+          <li><a href="#join">Join Us</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:14px;">
+        <a href="#join" class="nav-cta">
+          Get Early Access
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <!-- Mobile hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <nav id="mobile-drawer" aria-label="Mobile navigation">
+      <a href="#product">Product</a>
+      <a href="#how">How It Works</a>
+      <a href="#research">Research</a>
+      <a href="#ceo">About</a>
+      <a href="#join">Join Us</a>
+      <a href="#join" class="mob-cta">Get Early Access →</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+     HERO
+============================================================ -->
+    <section id="hero" class="wafer-bg-dark">
+      <!-- Ambient orbs -->
+      <div
+        style="position:absolute;top:-100px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,163,196,0.14) 0%,transparent 70%);border-radius:50%;filter:blur(60px);pointer-events:none;">
+      </div>
+      <div
+        style="position:absolute;bottom:0;left:10%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,107,53,0.07) 0%,transparent 70%);border-radius:50%;filter:blur(80px);pointer-events:none;">
+      </div>
+
+      <div class="container">
+        <div class="hero-grid">
+
+          <!-- Copy -->
+          <div>
+            <div class="hero-badge">
+              <span></span> Now in Early Access
+            </div>
+
+            <h1 class="hero-title">
+              The <span class="accent">Cloud POS + ERP</span><br />
+              built for restaurants<br />
+              and <span class="accent-orange">cafés.</span>
+            </h1>
+
+            <p class="hero-sub">
+              DiSEC brings a fully integrated billing, inventory, and business intelligence platform to every counter —
+              from a single-outlet café to a multi-branch chain. No clunky hardware. No fragmented tools.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#join" class="btn-primary">
+                Request Early Access
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="#product" class="btn-secondary">
+                Explore Platform
+              </a>
+            </div>
+
+            <!-- Micro-stats -->
+            <div class="hero-stats">
+              <div>
+                <div class="hero-stat-num">2<span class="unit">s</span></div>
+                <div class="hero-stat-label">Avg. order punch time</div>
+              </div>
+              <div>
+                <div class="hero-stat-num"><span class="unit">∞</span></div>
+                <div class="hero-stat-label">Menus & modifiers</div>
+              </div>
+              <div>
+                <div class="hero-stat-num">24<span class="unit">/7</span></div>
+                <div class="hero-stat-label">Cloud uptime SLA</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- POS Mockup Visual -->
+          <div class="hero-visual">
+            <div class="hero-glow"></div>
+
+            <!-- Floating badge — Order count -->
+            <div class="mock-badge b1">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              42 orders today
+            </div>
+            <!-- Floating badge — Revenue -->
+            <div class="mock-badge b2">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+              </svg>
+              ₹18,420 billed
+            </div>
+            <!-- Floating badge — Inventory -->
+            <div class="mock-badge b3">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path
+                  d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+              </svg>
+              Stock auto-updated
+            </div>
+
+            <!-- POS Screen shell -->
+            <div class="mockup-shell">
+              <div class="mockup-topbar">
+                <div class="mock-dots">
+                  <div class="mock-dot red"></div>
+                  <div class="mock-dot amber"></div>
+                  <div class="mock-dot green"></div>
+                </div>
+                <div class="mock-title-bar">DiSEC POS · Table 7 · Dine-In</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:rgba(0,163,196,0.7);">LIVE
+                </div>
+              </div>
+
+              <!-- Order items -->
+              <div class="mock-orders">
+                <div class="mock-order-row">
+                  <div>
+                    <div class="mock-order-name">Butter Chicken</div>
+                    <div class="mock-order-qty">× 2 · Main Course</div>
+                  </div>
+                  <div class="mock-order-price">₹520</div>
+                </div>
+                <div class="mock-order-row">
+                  <div>
+                    <div class="mock-order-name">Cappuccino</div>
+                    <div class="mock-order-qty">× 3 · Beverages</div>
+                  </div>
+                  <div class="mock-order-price">₹330</div>
+                </div>
+                <div class="mock-order-row">
+                  <div>
+                    <div class="mock-order-name">Garlic Naan</div>
+                    <div class="mock-order-qty">× 4 · Breads</div>
+                  </div>
+                  <div class="mock-order-price">₹180</div>
+                </div>
+                <div class="mock-order-row" style="border-color:rgba(255,107,53,0.2);">
+                  <div>
+                    <div class="mock-order-name" style="color:rgba(255,255,255,0.4);font-style:italic;">Chocolate Lava
+                      Cake</div>
+                    <div class="mock-order-qty">× 1 · Desserts</div>
+                  </div>
+                  <div class="mock-order-price" style="color:rgba(255,107,53,0.6);">₹150</div>
+                </div>
+              </div>
+
+              <!-- Bill total -->
+              <div class="mock-total-row">
+                <div>
+                  <div class="mock-total-label">Grand Total (incl. GST)</div>
+                  <div style="font-size:0.68rem;font-family:'JetBrains Mono',monospace;color:rgba(255,255,255,0.3);">
+                    CGST 9% + SGST 9%</div>
+                </div>
+                <div class="mock-total-amount">₹1,392</div>
+              </div>
+
+              <!-- Pay button -->
+              <div class="mock-pay-btn">Collect Payment &nbsp;·&nbsp; UPI / Card / Cash</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     TRUST BAR
+============================================================ -->
+    <section id="trust">
+      <div class="container">
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
+            GST-compliant billing
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="4" width="22" height="16" rx="2" />
+              <path d="M1 10h22" />
+            </svg>
+            UPI · Card · Cash · QR
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 20V10M12 20V4M6 20v-6" />
+            </svg>
+            Real-time sales analytics
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <path d="M8 21h8M12 17v4" />
+            </svg>
+            Works on any device
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            Offline-capable · 99.9% uptime
+          </div>
+          <div class="trust-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20" />
+            </svg>
+            Multi-outlet · Multi-menu
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     PRODUCT — PLATFORM FEATURES
+============================================================ -->
+    <section id="product">
+      <div class="container">
+        <div class="fade-up">
+          <div class="section-label label-mono">Cloud POS + ERP Platform</div>
+          <h2 class="section-title">
+            Every tool your F&B business needs — in one platform.
+          </h2>
+          <p class="section-sub">
+            DiSEC replaces your scattered billing apps, spreadsheet inventories, and manual reports with a single
+            cloud-native system designed for restaurant and café operators.
+          </p>
+        </div>
+
+        <!-- Feature cards row 1 -->
+        <div class="cards-grid-3 fade-up">
+
+          <div class="card">
+            <div class="card-icon icon-teal">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </div>
+            <div class="mb-2"><span class="pill pill-teal">Core POS</span></div>
+            <h3>Blazing-Fast Order Entry</h3>
+            <p>Touch-optimised interface works on tablet, desktop, or dedicated POS hardware. Build modifiers, combos,
+              and variants without limits.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon icon-teal">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 7H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" />
+                <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+              </svg>
+            </div>
+            <div class="mb-2"><span class="pill pill-teal">Inventory</span></div>
+            <h3>Live Inventory Management</h3>
+            <p>Auto-deduct stock on every sale. Set low-stock alerts, track ingredient-level consumption, and generate
+              purchase orders automatically.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon icon-teal">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" />
+                <path d="M1 10h22" />
+              </svg>
+            </div>
+            <div class="mb-2"><span class="pill pill-teal">Payments</span></div>
+            <h3>All Payment Modes, One Interface</h3>
+            <p>UPI, card swipe, NFC, cash, and split-bill — with auto-generated GST-compliant KOT receipts and digital
+              bill sharing via WhatsApp.</p>
+          </div>
+
+        </div>
+
+        <!-- Feature cards row 2 -->
+        <div class="cards-grid-3 fade-up mt-8">
+
+          <div class="card">
+            <div class="card-icon icon-orange">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 20V10M12 20V4M6 20v-6" />
+              </svg>
+            </div>
+            <div class="mb-2"><span class="pill pill-orange">Analytics</span></div>
+            <h3>Business Intelligence Dashboard</h3>
+            <p>Daily sales summaries, hourly heatmaps, top-selling items, staff performance, and table turnover —
+              available on your phone the moment a shift ends.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon icon-orange">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+              </svg>
+            </div>
+            <div class="mb-2"><span class="pill pill-orange">Staff & Tables</span></div>
+            <h3>Table & Staff Management</h3>
+            <p>Floor plan builder, table status view, captain-login per shift, and role-based access so every staff
+              member sees only what they need.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon icon-navy">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <div class="mb-2"><span class="pill pill-navy">Cloud ERP</span></div>
+            <h3>Multi-Branch ERP Backbone</h3>
+            <p>Centralise procurement, vendor management, expense tracking, and financial reporting across every outlet
+              from a single HQ console.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     HOW IT WORKS
+============================================================ -->
+    <section id="how">
+      <div class="container">
+        <div class="text-center fade-up">
+          <div class="section-label label-mono mx-auto" style="justify-content:center;">How It Works</div>
+          <h2 style="font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;color:var(--navy);margin-bottom:14px;">
+            Live in minutes. ROI from day one.
+          </h2>
+          <p style="font-size:0.97rem;color:var(--slate);max-width:520px;margin:0 auto 56px;line-height:1.7;">
+            No complex installations. No IT team required. DiSEC is designed to onboard a restaurant in under an hour.
+          </p>
+        </div>
+
+        <div class="steps-row fade-up">
+          <div class="step-card">
+            <div class="step-num">01</div>
+            <h4>Sign Up & Set Up Menu</h4>
+            <p>Import your menu via CSV or build it in our visual editor. Add categories, modifiers, taxes and pricing
+              in minutes.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">02</div>
+            <h4>Connect Your Hardware</h4>
+            <p>Plug in any thermal printer, cash drawer, or QR display. Our app runs on iPad, Android tablet, or any
+              browser.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">03</div>
+            <h4>Start Taking Orders</h4>
+            <p>Your team is live. Every order flows to the kitchen display, inventory deducts, and payment is collected
+              instantly.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">04</div>
+            <h4>Grow with Insights</h4>
+            <p>AI-generated daily summaries, smart reorder suggestions, and customer preference trends guide your next
+              decisions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     RESEARCH & INNOVATION
+============================================================ -->
+    <section id="research" class="wafer-bg-dark">
+      <!-- Ambient glow -->
+      <div
+        style="position:absolute;top:0;right:0;width:600px;height:400px;background:radial-gradient(circle,rgba(0,163,196,0.1) 0%,transparent 65%);border-radius:50%;filter:blur(80px);pointer-events:none;">
+      </div>
+
+      <div class="container">
+        <div class="fade-up">
+          <div class="section-label label-mono" style="color:var(--teal);">
+            <span style="background:var(--teal);"></span> R&amp;D Lab
+          </div>
+          <h2 class="section-title">Beyond POS — pioneering the intelligence layer.</h2>
+          <p class="section-sub">
+            While the POS platform powers daily operations, our research team is building the next stratum: custom AI
+            models, purpose-built IoT hardware, and embedded intelligence that will make restaurant operations
+            self-optimising.
+          </p>
+        </div>
+
+        <div class="cards-grid-3 fade-up">
+
+          <div class="card-dark">
+            <div class="card-icon icon-teal">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 110 20A10 10 0 0112 2z" />
+                <path d="M12 6v6l4 2" />
+              </svg>
+            </div>
+            <div class="mb-2"><span class="pill pill-teal">AI Research</span></div>
+            <h3>Custom AI Models for F&B</h3>
+            <p>Training domain-specific language and time-series models on restaurant telemetry: demand forecasting,
+              menu optimisation, and waste reduction at the item level.</p>
+          </div>
+
+          <div class="card-dark">
+            <div class="card-icon icon-teal">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="9" y="9" width="6" height="6" />
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3" />
+              </svg>
+            </div>
+            <div class="mb-2"><span class="pill pill-teal">Hardware</span></div>
+            <h3>Proprietary POS Hardware</h3>
+            <p>Designing compact, fanless POS terminals and kitchen display units with embedded edge compute —
+              purpose-built for the humidity, grease, and noise of a commercial kitchen.</p>
+          </div>
+
+          <div class="card-dark">
+            <div class="card-icon icon-teal">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14M15.54 8.46a5 5 0 010 7.07M8.46 8.46a5 5 0 000 7.07" />
+              </svg>
+            </div>
+            <div class="mb-2"><span class="pill pill-teal">IoT</span></div>
+            <h3>IoT Sensor Integration</h3>
+            <p>Smart temperature sensors for cold-chain compliance, occupancy sensors for table management, and energy
+              monitors — feeding live data back into the ERP layer.</p>
+          </div>
+
+        </div>
+
+        <!-- Research CTA strip -->
+        <div class="fade-up mt-12"
+          style="background:rgba(0,163,196,0.07);border:1px solid rgba(0,163,196,0.2);border-radius:16px;padding:32px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+          <div>
+            <div class="label-mono" style="color:var(--teal);margin-bottom:6px;">RESEARCH PARTNERSHIPS</div>
+            <p style="color:rgba(255,255,255,0.65);font-size:0.95rem;max-width:480px;">
+              Interested in collaborating on AI, embedded systems, or IoT for the food-service industry? We're open to
+              academic and industry research partnerships.
+            </p>
+          </div>
+          <a href="#join" class="btn-primary" style="flex-shrink:0;">
+            Partner with DiSEC
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+     CEO / ABOUT
+============================================================ -->
+    <section id="ceo" class="wafer-bg-light">
+      <div class="container">
+        <div class="ceo-grid">
+
+          <!-- Photo card -->
+          <div class="ceo-photo-wrap fade-up">
+            <!-- Animated ring avatar -->
+            <div class="ceo-avatar-ring">
+              <div class="ceo-avatar-bg"></div>
+              <div class="ceo-avatar-inner">
+                <img src="assets/images/ceo.jpeg" alt="Gautham Krishna P - Founder &amp; CEO" class="ceo-avatar-img" />
+              </div>
+            </div>
+
+            <!-- Name plate -->
+            <div class="ceo-name-plate">
+              <h3>Gautham Krishna P</h3>
+              <p>Founder &amp; CEO — DiSEC Technologies</p>
+            </div>
+
+            <!-- Social links -->
+            <div class="ceo-socials">
+              <a href="mailto:gauthamceo@disecsolution.com" class="ceo-social-btn" aria-label="Email">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="ceo-social-btn"
+                aria-label="LinkedIn">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="ceo-social-btn"
+                aria-label="X / Twitter">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bio -->
+          <div class="ceo-bio-side fade-up d2">
+            <div class="section-label label-mono" style="color:var(--teal);margin-bottom:14px;">
+              <span style="background:var(--teal);"></span> Founder &amp; CEO
+            </div>
+            <h2 class="section-title"
+              style="font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--navy);margin-bottom:20px;">
+              Building technology that makes every restaurant smarter.
+            </h2>
+
+            <p class="bio-text" style="color:var(--slate);font-size:0.97rem;line-height:1.75;margin-bottom:16px;">
+              Gautham is an Electronics and Communication Engineering graduate with a deep love for building real-world
+              products from first principles. He founded DiSEC with a conviction that restaurant operators deserve the
+              same quality of intelligent tooling that large enterprises take for granted.
+            </p>
+            <p class="bio-text" style="color:var(--slate);font-size:0.97rem;line-height:1.75;margin-bottom:28px;">
+              A self-taught developer, public speaker, and lifelong learner, Gautham leads the product, engineering, and
+              research vision at DiSEC — moving quickly across hardware design, cloud architecture, and AI model
+              training with equal enthusiasm.
+            </p>
+
+            <!-- Trait tags -->
+            <div class="trait-row">
+              <div class="trait-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                ECE Engineer
+              </div>
+              <div class="trait-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+                Developer
+              </div>
+              <div class="trait-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                </svg>
+                Public Speaker
+              </div>
+              <div class="trait-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 16v-4M12 8h.01" />
+                </svg>
+                Curious Learner
+              </div>
+              <div class="trait-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                  <rect x="9" y="9" width="6" height="6" />
+                </svg>
+                Hardware Enthusiast
+              </div>
+            </div>
+
+            <!-- Direct contact callout -->
+            <div class="ceo-contact-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00A3C4" stroke-width="2"
+                flex-shrink="0">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <div>
+                <p style="color:rgba(255,255,255,0.75);font-size:0.9rem;margin-bottom:4px;font-weight:500;">Reach
+                  Gautham directly</p>
+                <p style="color:rgba(255,255,255,0.4);font-size:0.8rem;">For partnerships, press, or investment
+                  conversations.</p>
+                <a class="email-link" href="mailto:gauthamceo@disecsolution.com">gauthamceo@disecsolution.com</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+     JOIN US — CAREERS / OUTREACH
+============================================================ -->
+    <section id="join" class="wafer-bg-dark">
+      <!-- Glow -->
+      <div
+        style="position:absolute;bottom:-80px;left:50%;transform:translateX(-50%);width:700px;height:300px;background:radial-gradient(ellipse,rgba(0,163,196,0.12) 0%,transparent 70%);filter:blur(60px);pointer-events:none;">
+      </div>
+
+      <div class="container">
+        <div class="fade-up">
+          <div class="section-label label-mono" style="color:var(--teal);">
+            <span style="background:var(--teal);"></span> Join the Team
+          </div>
+          <h2 class="section-title">We're building something new. Come build it with us.</h2>
+          <p class="section-sub">
+            DiSEC is a small, focused team. We're looking for people who want to work at the intersection of product,
+            technology, and the food-service world. If you're curious, capable, and care about craft — reach out
+            directly to our CEO.
+          </p>
+        </div>
+
+        <!-- Role cards -->
+        <div class="role-cards fade-up">
+
+          <div class="role-card" data-role="tech" onclick="this.classList.toggle('selected')">
+            <div class="role-icon" style="background:rgba(0,163,196,0.12);color:var(--teal);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <h4>Technology</h4>
+            <p>Full-stack engineers, mobile developers, embedded systems, AI/ML researchers, and cloud infrastructure.
+            </p>
+            <div class="role-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="role-card" data-role="design" onclick="this.classList.toggle('selected')">
+            <div class="role-icon" style="background:rgba(255,107,53,0.1);color:var(--orange);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            </div>
+            <h4>Design</h4>
+            <p>Product designers, UX researchers, and motion designers passionate about creating intuitive enterprise
+              tools.</p>
+            <div class="role-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="role-card" data-role="sales" onclick="this.classList.toggle('selected')">
+            <div class="role-icon" style="background:rgba(99,102,241,0.12);color:#818CF8;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 20V10M12 20V4M6 20v-6" />
+              </svg>
+            </div>
+            <h4>Finance &amp; Sales</h4>
+            <p>Business development reps, account executives, financial analysts, and growth strategists for restaurant
+              markets.</p>
+            <div class="role-check">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact form -->
+        <div class="contact-form-card fade-up">
+
+          <!-- Success state -->
+          <div class="form-success-state" id="form-success">
+            <div class="success-icon">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Gautham will review your message and get back to you personally within 1–2 business days.</p>
+          </div>
+
+          <div id="form-inner">
+            <div style="margin-bottom:28px;">
+              <h3 style="font-size:1.2rem;font-weight:700;color:var(--white);margin-bottom:6px;">
+                Send a message directly to the CEO
+              </h3>
+              <p style="font-size:0.82rem;color:rgba(255,255,255,0.4);">
+                Your message goes straight to <span
+                  style="color:var(--teal);font-family:'JetBrains Mono',monospace;font-size:0.78rem;">gauthamceo@disecsolution.com</span>
+              </p>
+            </div>
+
+            <form id="contact-form" novalidate>
+              <!-- Row 1 -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-name">Full Name *</label>
+                  <input type="text" id="f-name" placeholder="Your full name" autocomplete="name" />
+                  <span class="form-error" id="err-name">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                  <label for="f-email">Email Address *</label>
+                  <input type="email" id="f-email" placeholder="you@example.com" autocomplete="email" />
+                  <span class="form-error" id="err-email">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-company">Company / College</label>
+                  <input type="text" id="f-company" placeholder="Where you work or study" />
+                  <span class="form-error" id="err-company">Please enter your company or college.</span>
+                </div>
+                <div class="form-group">
+                  <label for="f-role">Area of Interest *</label>
+                  <select id="f-role">
+                    <option value="">Select a domain…</option>
+                    <option value="tech">Technology — Engineering / AI / Hardware / IoT</option>
+                    <option value="design">Design — Product / UX / Motion</option>
+                    <option value="sales">Finance &amp; Sales — BD / GTM / Growth</option>
+                    <option value="research">Research — AI, Embedded, F&amp;B Intelligence</option>
+                    <option value="other">Other — Tell me in your message</option>
+                  </select>
+                  <span class="form-error" id="err-role">Please select your area of interest.</span>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="f-msg">Your Message</label>
+                <textarea id="f-msg"
+                  placeholder="Tell Gautham a bit about yourself, what you're working on, and why DiSEC interests you…"></textarea>
+              </div>
+
+              <!-- Submit -->
+              <div class="form-submit-row">
+                <span class="form-note">🔒 Sent directly to CEO · No spam, ever</span>
+                <button type="submit" id="submit-btn" class="btn-primary">
+                  Send Message
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                  </svg>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+     FOOTER
+============================================================ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div>
+          <div class="footer-logo">
+            <a href="#hero" class="nav-logo" style="margin-bottom:12px;display:inline-flex;">
+              <div class="nav-logo-icon" style="width:32px;height:32px;border-radius:8px;">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2">
+                  <rect x="2" y="2" width="20" height="20" rx="4" />
+                  <rect x="8" y="8" width="8" height="8" rx="1.5" />
+                </svg>
+              </div>
+              <span class="nav-logo-text" style="font-size:1.3rem;">Di<span>SEC</span></span>
+            </a>
+          </div>
+          <p class="footer-desc">
+            Building the cloud POS + ERP platform for restaurants and cafés — and researching the AI, hardware, and IoT
+            layer that powers the next era of food-service technology.
+          </p>
+          <div class="footer-email">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00A3C4" stroke-width="2"
+              style="display:inline;margin-right:6px;">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <a href="mailto:gauthamceo@disecsolution.com">gauthamceo@disecsolution.com</a>
+          </div>
+        </div>
+
+        <!-- Platform links -->
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <ul>
+            <li><a href="#product">Cloud POS</a></li>
+            <li><a href="#product">Inventory Management</a></li>
+            <li><a href="#product">Payments &amp; Billing</a></li>
+            <li><a href="#product">Analytics Dashboard</a></li>
+            <li><a href="#product">Multi-Branch ERP</a></li>
+          </ul>
+        </div>
+
+        <!-- Research links -->
+        <div class="footer-col">
+          <h5>Research</h5>
+          <ul>
+            <li><a href="#research">AI Models</a></li>
+            <li><a href="#research">POS Hardware</a></li>
+            <li><a href="#research">IoT Integration</a></li>
+            <li><a href="#research">Partner with Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Company links -->
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#ceo">About Gautham</a></li>
+            <li><a href="#join">Join the Team</a></li>
+            <li><a href="mailto:gauthamceo@disecsolution.com">Contact CEO</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 DiSEC Technologies. All rights reserved.</p>
+        <p>Designed &amp; built by Gautham Krishna P &mdash; Austin &amp; India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js" defer></script>
+
+</body>
+
+</html>
